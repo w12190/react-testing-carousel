@@ -22,3 +22,16 @@ it ("matches snapshot", function (){
   />)
   expect(container).toMatchSnapshot()
 })
+
+it('creates an accurate card', function(){
+  const {container} = render(
+  <Card
+    caption="test_caption"
+    src={image1} //this is the image
+    currNum={1}
+    totalNum={1}
+  />)
+
+  expect(container.querySelector('.Card-image')).toBeInTheDocument()
+  expect(container.querySelector('.not-here')).not.toBeInTheDocument()
+})

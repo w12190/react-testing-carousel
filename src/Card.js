@@ -11,6 +11,7 @@ import "./Card.css";
  * 
  * App => Carousel => Card
  */
+//CR: destructer props when it's very simple (like one prop here with caption)
 function Card(props) {
   return (
     <div className="Card">
